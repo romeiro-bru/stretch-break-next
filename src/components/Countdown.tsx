@@ -30,7 +30,11 @@ export function Countdown() {
     useEffect(() => {
         if(isActive && time > 0) {
         countdownTimeout = setTimeout(() => { setTime(time - 1) }, 1000)
-        } else if(isActive && time === 0) {setHasFinished(true); setIsActive(false)} 
+        } else if(isActive && time === 0) {
+            setHasFinished(true);
+            setIsActive(false);
+            startNewChallenge();
+        } 
     }, [isActive, time])
 
     return( 
