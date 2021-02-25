@@ -3,13 +3,11 @@ import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
-    const contextData = useContext(ChallengesContext)
-
-    const hasActiveChallenge = true
+    const { activeChallenge } = useContext(ChallengesContext)
 
     return(
         <div className={styles.challengeBoxContainer}>
-           { hasActiveChallenge ? (
+           { activeChallenge ? (
                <div className={styles.challengeActive}>
                    <header>Ganhe 400 xp</header>
 
