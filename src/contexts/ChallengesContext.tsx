@@ -47,7 +47,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
             challengesCompleted,
             levelUp,
             startNewChallenge,
-            activeChallenge
+            activeChallenge,
          }}
         >
             {children}
