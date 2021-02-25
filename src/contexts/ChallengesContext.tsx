@@ -20,6 +20,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     const [currentExperience, setCurrentExperience] = useState(0)
     const [challengesCompleted, setChallengesCompleted] = useState(0)
 
+    const [activeChallenge, setActiveChallenge] = useState(null)
+
     function levelUp() {
         setLevel(level + 1)
     }
@@ -27,6 +29,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     function startNewChallenge() {
        const randomChallengeIndex = Math.floor(Math.random() * challenges.length)
        const challenge = challenges[randomChallengeIndex]
+
+       setActiveChallenge(challenge)
     }
 
     return(
