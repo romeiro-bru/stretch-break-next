@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 import challenges from '../../challenges.json';
 
 interface Challenge {
@@ -37,6 +38,16 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     useEffect(() => {
         Notification.requestPermission()
     }, [])
+
+    // infarmações que quero armazenar no cookies
+    // converto to string, they only accept strings
+    useEffect(() => {
+
+        Cookies.set('level', level.toString());
+        Cookies.set('currentExperience', currentExperience.toString());
+        Cookies.set('challengesCompleted', challengesCompleted.toString())
+
+    }, [level, currentExperience, challengesCompleted])
 
     function levelUp() {
         setLevel(level + 1)
