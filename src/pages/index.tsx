@@ -18,11 +18,10 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-  console.log(props)
   return (
     <ChallengesProvider
       level={props.level}
-      currentExperiece={props.currentExperience}
+      currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
 
@@ -51,19 +50,13 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const user = {
-    level: 1,
-    currentExperience: 50,
-    challengesCompleted: 2,
-  }
-
   const { level, currentExperience, challengesCompleted } = ctx.req.cookies
 
   return {
     props: {
       level: Number(level),
-      currentExperience: Number(level),
-      challengesCompleted: Number(level)
+      currentExperience: Number(currentExperience),
+      challengesCompleted: Number(challengesCompleted)
     }
   }
 }
