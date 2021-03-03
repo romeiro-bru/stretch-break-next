@@ -59,7 +59,7 @@
 }
 
 .countdownButtonActive {
-    background: var(--blue);
+    background: #030414;
     color: var(--title);
 }
 
@@ -69,7 +69,7 @@
 }
 
 .countdownButton:disabled {
-    background: var(--red);
+    background: #030414;
     color: var(--text);
     cursor: not-allowed;
 }
