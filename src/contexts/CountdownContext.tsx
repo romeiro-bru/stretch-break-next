@@ -1,5 +1,4 @@
 import { useContext, createContext, ReactNode, useState, useEffect } from 'react';
-import { Countdown } from '../components/Countdown';
 import { ChallengesContext } from './ChallengesContext';
 
 interface CountdownContextData {
