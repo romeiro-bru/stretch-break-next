@@ -6,13 +6,14 @@
 
 :root {
     --white: #fff;
-    --background: #F2F3F5;
+    --background: #0d1117;
+    --background-box: #15161b;
     --gray-line: #DCDDE0;
-    --text: #666666;
+    --text: #d6d8dd;
     --text-highlight: #B3B9FF;
-    --title: #2E384D;
+    --title: #cacdd3;
     --red: #E83F5B;
-    --green: #4cd62B;
+    --green: #62d62d;
     --blue: #5965E0;
     --blue-dark: #4953B8;
     --blue-twitter: #2AA9E0;
